@@ -8,6 +8,8 @@ import axios, * as others from 'axios';
 function App() {
     const [artists, setArtists] = useState([]);
     const [selectedArtistId, setSelectedArtistId] = useState(null);
+    const [selectedTrack, setSelectedTrack] = useState(null);
+
     const [tracks,setTracks]=useState([]);
     const [lyrics, setLyrics] = useState([])
 
@@ -33,7 +35,8 @@ function App() {
 
         function onClickHandlerLyrics(e) {
             e.preventDefault()
-            const trackId = e.currentTarget.getAttribute('track_id')
+            const trackId = e.currentTarget.getAttribute('track_id');
+            setSelectedTrack(trackId.toString());
             axios.get(`http://127.0.0.1:8000/api/v1/song/${trackId}`)
                 .then((resp) => {
                     setLyrics([resp.data])
@@ -63,7 +66,11 @@ function App() {
           <div className="col">
           <h2> Tracks </h2>
           <ul>
-                    {tracks.map(((track, idx) => <li key={`track${track.id}`}>
+                    {tracks.map(((track, idx) => 
+                                           <li key={`track${track.id}`}
+                                           className={selectedTrack === track.id.toString() ? 'Track_sel' : ''}
+                                           >
+
                         <a
                             href={`http://127.0.0.1:8000/api/v1/song/${track.id}`}
                             onClick={onClickHandlerLyrics}
