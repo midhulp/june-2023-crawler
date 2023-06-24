@@ -25,6 +25,15 @@ def api_artist(artist_id):
     ret = [{"id": i.id, "name": i.name} for i in artist.tracks]
     return jsonify(dict(tracks=ret))
 
+@app.route("/api/v1/song/<song_id>")
+def api_songs(song_id):
+    db = models.init_db(app)
+    track = db.session.execute(
+        db.select(models.Tracks).filter(models.Tracks.id == song_id)
+    ).scalar()
+    lyrics = {"name": track.name, "lyrics": track.lyrics}
+    return jsonify(lyrics)
+
 
 @app.route("/")
 def index():
@@ -54,7 +63,7 @@ def song(song_id):
         return render_template("track.html", artists = artists, current = track.artist, track = track)
 
 @app.route("/songs/<artist_id>")
-def songs(artist_id):
+def api(artist_id):
     db = models.init_db(app)
     artist = db.session.execute(db.select(models.Artist).filter(models.Artist.id == artist_id)).scalar()
     tracks = []
