@@ -45,33 +45,36 @@ function App() {
     
     
   return (
+          
+          <div className='whole'>
           <div className="row">
-          <div className="col">
-          <h2> Artists </h2>
+          <div className="col-sm-4">
+          <h2 className='artcolor'> Artists </h2>
           <ol>
-                          {artists.map(((artist, idx)=><li 
+                          {artists.map(((artist, idx)=><li
                                                           key={`artist${artist.id}`}
                                                           className={selectedArtistId === artist.id.toString() ? 'selected' : ''}
                                                           >
-                                        <a 
+                                        <div className='box'>
+                                        <a className='highlight'
                                         href={`http://127.0.0.1:8000/api/v1/artist/${artist.id}`}
                                         onClick={onClickHandlerTracks}
                                         artist_id={artist.id}
 
                                         >{artist.name}
-                                        </a>
+                                        </a></div>
                                         </li>))}
           </ol>
           </div>
-          <div className="col">
-          <h2> Tracks </h2>
+          <div className="col-sm-4">
+          <h2 className='trackcolor'> Tracks </h2>
           <ul>
                     {tracks.map(((track, idx) => 
                                            <li key={`track${track.id}`}
                                            className={selectedTrack === track.id.toString() ? 'Track_sel' : ''}
                                            >
 
-                        <a
+                        <a className='highlight1'
                             href={`http://127.0.0.1:8000/api/v1/song/${track.id}`}
                             onClick={onClickHandlerLyrics}
                             track_id={track.id}
@@ -80,14 +83,15 @@ function App() {
                     </li>))}
                 </ul>
           </div>
-          <div className="col">
-          <h2> Lyrics </h2>
+          <div className="col-sm-4">
+          <h2 className='lyricolor'> Lyrics </h2>
           {lyrics.map(((lyric, idx) => 
                 <div key={idx} >
                     <div><b><u>{lyric.name}</u></b></div><br></br>    
                     <em><div style={{ whiteSpace: 'pre-wrap' }}>{lyric.lyrics}</div></em>  
                 </div>))}
 
+          </div>
           </div>
           </div>
   );
