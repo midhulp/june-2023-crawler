@@ -1,30 +1,4 @@
-/* 
-.selected{
-    background-color:rgba(255, 255, 255, 0.123);
-    border-radius: 53px;
-    font-weight: bold;
-   
-}
 
-.artcolor{
-  color: red;
-}
-
-.trackcolor{
-  color: white;
-}
-
-.lyricolor{
-  color: white;
-}
-
-.Track_sel {
-  background-color: rgba(255, 255, 255, 0.123);
-  border-radius: 53px;
-  font-weight: bold;
-  
-    
-/*  */
 .highlight{
   text-decoration: none;
   display:block;
@@ -38,9 +12,7 @@
   color: #f2ceaa; 
 }
 
-/* .highlight:hover{ */
-  /* border-color: #f2ceaa; */
-/* } */ 
+
 
 .highlight1{
   text-decoration: none;
@@ -54,52 +26,7 @@
   overflow: hidden;
   color: #f2ceaa;
 }
-/* 
-ol{
-  list-style-type: none;
-}
 
-
-ul{
-  list-style-type: none;
-} */
-/* .whole{
-  background-color: #2d2636;
-  
-  border-radius: 10px;
-    
-} */
-
-/* .lyri{
-  text-decoration: none;
-  display:block;
-  border: 1px solid #000;
-  border-radius: 53px;
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 383px;
-  overflow: hidden;
-  color: #f2ceaa;
-} */
-/* 
-.trackblock{
-  border: 1px solid #000;
-  background-color: #2d2636;
-
-}
-.artblock{
-  border: 1px solid #000;
-  background-color: #2d2636;
-
-}
-.lyricblock{
-  border: 1px solid #000;
-  background-color: #2d2636;
-
-} */
-
-
-/* hello */
 
 .artblock {
   background-color: #2d2636;
@@ -136,7 +63,7 @@ ol {
 li {
   list-style-type: none;
   padding-left: -10px;
-  /* margin-bottom: 5px; */
+
 }
 
 .selected {
@@ -155,17 +82,6 @@ li {
   
 
 }
-/* 
-.box {
-  display: inline-block;
-  padding: 5px;
-  background-color: #ccc;
-} */
-/* 
-a.highlight {
-  color: #fff;
-  text-decoration: none;
-} */
 
 a.highlight:hover {
   border-color: #f2ceaa;
