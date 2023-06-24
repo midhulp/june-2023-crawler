@@ -1,14 +1,64 @@
 
-.selected {
-    background-color: yellow;
+.selected{
+    background-color:rgba(242,206,170,.08);
+    border-radius: 53px;
     font-weight: bold;
-    
-  }
+}
+
+.artcolor{
+  color: white;
+}
+
+.trackcolor{
+  color: white;
+}
+
+.lyricolor{
+  color: white;
+}
 
 .Track_sel {
   background-color: yellow;
   font-weight: bold;
   
+  
 }
+.highlight{
+  text-decoration: none;
+  display:block;
+  border: 1px solid #000;
+  border-radius: 53px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 383px;
+  overflow: hidden;
+  color: #f2ceaa;
+}
+
+.highlight:hover{
+  border-color: #f2ceaa;
+}
+
+.highlight1{
+  text-decoration: none;
+  color: #f2ceaa;
+}
+
+ol{
+  list-style-type: none;
+}
+
+
+ul{
+  list-style-type: none;
+}
+.whole{
+  background-color: #2d2636;
+  
+  border-radius: 10px;
+    
+}
+
+
 
 
