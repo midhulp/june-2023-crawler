@@ -46,9 +46,10 @@ function App() {
     
   return (
           
-          <div className='whole'>
+          
           <div className="row">
           <div className="col-sm-4">
+          <div className='artblock'>
           <h2 className='artcolor'> Artists </h2>
           <ol>
                           {artists.map(((artist, idx)=><li
@@ -66,7 +67,9 @@ function App() {
                                         </li>))}
           </ol>
           </div>
+          </div>
           <div className="col-sm-4">
+            <div className='trackblock'>
           <h2 className='trackcolor'> Tracks </h2>
           <ul>
                     {tracks.map(((track, idx) => 
@@ -82,18 +85,22 @@ function App() {
                         </a>
                     </li>))}
                 </ul>
+          </div>     
           </div>
           <div className="col-sm-4">
+        <div className='lyricblock'>
           <h2 className='lyricolor'> Lyrics </h2>
           {lyrics.map(((lyric, idx) => 
+                
                 <div key={idx} >
-                    <div><b><u>{lyric.name}</u></b></div><br></br>    
-                    <em><div style={{ whiteSpace: 'pre-wrap' }}>{lyric.lyrics}</div></em>  
+                    <div style={{color:'#f2ceaa'}}><b><u>{lyric.name}</u></b></div><br></br>    
+                    <em><div style={{ whiteSpace: 'pre-wrap',color:'#f2ceaa' }}>{lyric.lyrics}</div></em>
                 </div>))}
-
+                
+</div>
           </div>
           </div>
-          </div>
+          
   );
 }
 
