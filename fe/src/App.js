@@ -13,6 +13,7 @@ function App() {
 
     const [tracks,setTracks]=useState([]);
     const [lyrics, setLyrics] = useState([])
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         axios.get("http://127.0.0.1:8000//api/v1/artist")
@@ -43,6 +44,10 @@ function App() {
                     setLyrics([resp.data])
                 })
         }
+        const filteredArtists = artists.filter(artist =>
+            artist.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
 
          
   return (
@@ -52,8 +57,12 @@ function App() {
           <div className="col-sm-4">
           <div className='artblock'>
           <h2 className='artcolor'> Artists </h2>
+          <input type="text" placeholder="Search artists"
+                            value={searchTerm}
+                            onChange={(event) => setSearchTerm(event.target.value)}
+                        />
           <ol>
-                          {artists.map(((artist, idx)=><li
+                          {filteredArtists.map(((artist, idx)=><li
                                                           key={`artist${artist.id}`}
                                                           className={selectedArtistId === artist.id.toString() ? 'selected' : ''}
                                                           >
