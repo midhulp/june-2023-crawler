@@ -37,7 +37,7 @@
 .trackblock{
   background-color: #2d2636;
   padding:10px;
-  height: 532px; 
+  /* height: 532px;  */
   border-radius: 30px;
 }
 .lyricblock{
