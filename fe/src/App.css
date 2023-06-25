@@ -37,11 +37,20 @@
 .trackblock{
   background-color: #2d2636;
   padding:10px;
+  height: 532px; 
   border-radius: 30px;
 }
 .lyricblock{
   background-color: #2d2636;
   border-radius: 30px;
+  height:532px;
+  flex:1;
+  overflow-y: scroll;
+
+}
+
+.lyricblock::-webkit-scrollbar {
+  display: none;
 }
 
 .artcolor {
