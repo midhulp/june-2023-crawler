@@ -26,19 +26,31 @@
     -->
     <title>React App</title>
   </head>
-  <body>
+  <body style="background-image: url('https://img.freepik.com/free-vector/gradient-golden-background-design_23-2149088208.jpg?w=1800&t=st=1687685706~exp=1687686306~hmac=ef02674a8a8a4bf184d0ee8382b0fe4ee14ccfc51460c423a5f8d1eee026811a');">
     <noscript>You need to enable JavaScript to run this app.</noscript>
 <!-- As a heading -->
-<nav class="navbar navbar-light bg-light">
+<!-- <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <span class="navbar-brand mb-0 h1">HamonLyrics.in</span>
   </div>
-</nav>
+</nav> -->
+<button id="reload-btn" class="btn1" >Reset</button>
+
+<!-- Include a script tag to add event listener to the button -->
+<script>
+  // Get a reference to the button element
+  var reloadBtn = document.getElementById('reload-btn');
+  // Add a click event listener to the button
+  reloadBtn.addEventListener('click', function() {
+    // Call the location.reload() method to reload the page
+    location.reload();
+  });
+</script>
     <div class="container">
           <center>
-    <h1 class="display-1" style="color:white"> Welcome to our Lyrics server</h1>
+    <h1 class="display-1" style="color:white"><br> Welcome to our Lyrics server</h1>
     </center>
-    <center><div id="root"></div></center>
+    <center><br><div id="root"></div></center>
   
     <!--
       This HTML file is a template.
