@@ -19,5 +19,15 @@ code {
 .btn1{
   float: right;
   border-radius: 30px;
+  background-color:#f2ceaa;
+  margin: 10px;
+  padding: 10px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;            
+  box-shadow: 0 0 5px #eee;
+  display: block;
+  background-position: right center; /* change the direction of the change here */
+  color: black;
+  text-decoration: none;
 }
-
