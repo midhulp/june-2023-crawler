@@ -13,8 +13,9 @@ code {
     monospace;
 }
 .display-1{
-  font-family: Arial, Helvetica, sans-serif;
-
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 1cm;
+  font-size:xx-large;
 }
 .btn1{
   float: right;
