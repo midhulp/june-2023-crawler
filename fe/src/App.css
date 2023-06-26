@@ -77,7 +77,6 @@ li {
 
 .selected {
   font-weight: bold;
-  font-size:x-large;
   font-style: italic;
   text-decoration-line:line-through;
   
@@ -85,15 +84,14 @@ li {
 
 .Track_sel{
   font-weight: bold;
-  font-size: x-large;
   font-style: italic;
   text-decoration-line:line-through;
 }
 .selected a.highlight{
-  border-color: aqua;
+  border-color:coral;
 }
 .Track_sel a.highlight1{
-  border-color: ;
+  border-color: coral;
 }
 
 a.highlight:hover {
