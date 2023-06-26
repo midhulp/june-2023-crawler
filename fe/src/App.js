@@ -60,9 +60,9 @@ function App() {
           
           <div className="row">
           <div className="col-sm-4">
-          <div className='artblock'>
+          <div className='artblock' col>
           <h2 className='artcolor'> Artists </h2>
-          <input type="text" placeholder="Search artists"
+          <input className='search1' type="text" placeholder="Search artists"
                             value={searchTerm}
                             onChange={(event) => setSearchTerm(event.target.value)}
                         />
@@ -71,14 +71,14 @@ function App() {
                                                           key={`artist${artist.id}`}
                                                           className={selectedArtistId === artist.id.toString() ? 'selected' : ''}
                                                           >
-                                        <div className='box'>
+                                        
                                         <a className='highlight'
                                         href={`http://127.0.0.1:8000/api/v1/artist/${artist.id}`}
                                         onClick={onClickHandlerTracks}
                                         artist_id={artist.id}
 
                                         >{artist.name}
-                                        </a></div>
+                                        </a>
                                         </li>))}
           </ol>
           </div>
@@ -86,7 +86,7 @@ function App() {
           <div className="col-sm-4">
             <div className='trackblock'>
           <h2 className='trackcolor'> Tracks </h2>
-          <input type="text" placeholder="Search tracks"
+          <input className='search2' type="text" placeholder="Search tracks"
                         value={trackSearchTerm}
                         onChange={(event) => setTrackSearchTerm(event.target.value)}
                     />
@@ -112,7 +112,7 @@ function App() {
           {lyrics.map(((lyric, idx) => 
                 
                 <div key={idx} >
-                    <div style={{color:'#f2ceaa'}}><b><u>{lyric.name}</u></b></div><br></br>    
+                    <div style={{color:'#f2ceaa',fontSize:'25px'}}><b><u>{lyric.name}</u></b></div><br></br>
                     <em><div style={{ whiteSpace: 'pre-wrap',color:'#f2ceaa' }}>{lyric.lyrics}</div></em>
                 </div>))}
                 

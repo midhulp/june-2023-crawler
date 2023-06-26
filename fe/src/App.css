@@ -43,7 +43,7 @@
 .lyricblock{
   background-color: #2d2636;
   border-radius: 30px;
-  height:532px;
+  height:560px;
   flex:1;
   overflow-y: scroll;
 
@@ -88,8 +88,12 @@ li {
   font-size: x-large;
   font-style: italic;
   text-decoration-line:line-through;
-  
-
+}
+.selected a.highlight{
+  border-color: aqua;
+}
+.Track_sel a.highlight1{
+  border-color: ;
 }
 
 a.highlight:hover {
@@ -98,6 +102,21 @@ a.highlight:hover {
 }
 a.highlight1:hover{
   border-color: #f2ceaa;
+}
+.search1{
+  border-radius:30px;
+  border-color:#f2ceaa;
+  background-color: #2d2636;
+  color: aliceblue;
+  
+}
+
+.search2{
+  border-radius:30px;
+  border-color:#f2ceaa;
+  background-color: #2d2636;
+  color: aliceblue;
+  
 }
 
 
