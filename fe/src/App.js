@@ -108,11 +108,11 @@ function App() {
           </div>
           <div className="col-sm-4">
         <div className='lyricblock'>
-          <h2 className='lyricolor'> Lyrics </h2>
+          <h2 className='lyricolor'> Lyrics </h2><br></br>
           {lyrics.map(((lyric, idx) => 
                 
                 <div key={idx} >
-                    <div style={{color:'#f2ceaa',fontSize:'25px'}}><b><u>{lyric.name}</u></b></div><br></br>
+                    <div style={{color:'#f2ceaa',fontSize:'25px'}}><b><u>{lyric.name}</u></b></div>
                     <em><div style={{ whiteSpace: 'pre-wrap',color:'#f2ceaa' }}>{lyric.lyrics}</div></em>
                 </div>))}
                 

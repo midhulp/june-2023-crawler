@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 .highlight{
   text-decoration: none;
@@ -55,12 +56,18 @@
 
 .artcolor {
   color:white;
+  font-family: 'DM Sans', sans-serif;
+
 }
 .trackcolor{
   color: white;
+  font-family: 'DM Sans', sans-serif;
+
 }
 .lyricolor{
   color:white;
+  font-family: 'DM Sans', sans-serif;
+
 }
 
 
@@ -88,10 +95,10 @@ li {
   text-decoration-line:line-through;
 }
 .selected a.highlight{
-  border-color:coral;
+  border-color:yellow;
 }
 .Track_sel a.highlight1{
-  border-color: coral;
+  border-color: yellow;
 }
 
 a.highlight:hover {
